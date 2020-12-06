@@ -1,0 +1,74 @@
+{
+  "command": [
+    {
+      "name": "suggest",
+      "perms": [],
+      "actions": [
+        {
+          "name": "Suggestion Variable",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "Suggestion Variable",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "0"
+        },
+        {
+          "name": "Suggestion Message",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FFC200",
+          "title": "New Suggestion!",
+          "url": "",
+          "authorname": "<@${dbsVars.CommandAuthor.id}> Suggested An Idea!",
+          "authorimageurl": "${dbsVars.CommandAuthor.user.avatarURL}",
+          "authorlink": "",
+          "description": "${tempVars.Suggestion Variable}",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "global"
+        }
+      ]
+    },
+    {
+      "name": "runactivity",
+      "actions": [
+        {
+          "name": "Current Bot Activity",
+          "category": "Bot Action",
+          "type": "Set Bot Activity",
+          "activityname": "Christmas Music",
+          "activitytype": "STREAMING",
+          "streamurl": "https://www.youtube.com/watch?v=6raBU3oLYbc"
+        },
+        {
+          "name": "Activity Response",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "00FF07",
+          "title": "Successfuly Ran Current Activity To Chill Bot!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "",
+          "thumbnail": "https://image.flaticon.com/icons/svg/458/458594.svg",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "help",
+      "actions": []
+    }
+  ]
+}
